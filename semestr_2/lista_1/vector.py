@@ -138,6 +138,15 @@ class Vector:
         if isinstance(other, Vector) and len(self._data):
             return Vector(*(map(operator.sub, self._data, other._data)))
     
+    def __rmul__(self, scalar):
+        """
+        Scalar multiplication.
+        
+        :param scalar: A float value to multiply each component.
+        :return: A new Vector instance with scaled components.
+        """
+        return Vector(*[scalar * x for x in self._data])
+        
     def __mul__(self, scalar):
         """
         Scalar multiplication.
@@ -145,7 +154,7 @@ class Vector:
         :param scalar: A float value to multiply each component.
         :return: A new Vector instance with scaled components.
         """
-        return Vector(*[x * scalar for x in self._data])
+        return Vector(*[scalar * x for x in self._data])
 
         
     def dot(self, other):
@@ -205,5 +214,6 @@ class Vector:
 
 vector1 = Vector(3, 2, 9) 
 
-print(vector1)
+print(5*vector1)
+print(vector1*5)
 
