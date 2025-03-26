@@ -1,0 +1,4 @@
+cryptography==44.0.2
+pyOpenSSL==25.0.0
+pypdf==5.4.0
+opencv==4.10.0 
