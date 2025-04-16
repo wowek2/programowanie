@@ -1,12 +1,12 @@
-dash==2.14.2
-dash-bootstrap-components==1.6.0
+dash
+dash-bootstrap-components
 
-requests==2.31.0
-requests-cache==1.2.0
-pandas==2.1.4
+requests
+requests-cache
+pandas
 
-plotly==5.18.0
+plotly
 
-dash-bootstrap-templates==1.1.7
+dash-bootstrap-templates
 
 gunicorn
