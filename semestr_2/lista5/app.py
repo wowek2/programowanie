@@ -23,6 +23,8 @@ def create_app() -> Dash:
     
     # Inicjalizacja Dash'a
     app = Dash(__name__, external_stylesheets=[dbc.themes.LUX])
+    server = app.server
+
     
     # Konfiguracja layotu i callbacków
     app.layout = create_layout(data_handler)
