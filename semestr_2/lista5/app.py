@@ -22,8 +22,7 @@ def create_app() -> Dash:
     data_handler = NBPDataHandler()
     
     # Inicjalizacja Dash'a
-    app = Dash(__name__, external_stylesheets=[dbc.themes.LUX])
-    server = app.server
+    app = Dash(__name__,external_stylesheets=[dbc.themes.LUX])
 
     
     # Konfiguracja layotu i callbacków
@@ -33,7 +32,10 @@ def create_app() -> Dash:
     return app
 
 
-if __name__ == '__main__':
-    """Główny punkt wejścia uruchamiający aplikację."""
-    app = create_app()
-    app.run(debug=True)
+app = create_app()
+server = app.server
+
+#if __name__ == '__main__':
+#    """Główny punkt wejścia uruchamiający aplikację."""
+#    app = create_app()
+#    app.run(debug=True)
